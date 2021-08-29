@@ -1,10 +1,8 @@
 <template id="app">
-  <img alt="Vue logo" class="element-plus-logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3.0 + Element Plus + Vite" />
+  <router-view></router-view>
 </template>
 
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
 import {onMounted} from "vue";
 import {getToken} from './api/api'
 
@@ -12,7 +10,6 @@ onMounted(()=>{
   getToken().then(res=>{
     console.log(res);
   })
-
 })
 
 </script>
