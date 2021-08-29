@@ -14,6 +14,11 @@ export default defineConfig({
       scss: { additionalData: `@import ${srcPath};\n` },
     },
   },
+  server:{
+    proxy:{
+      "/api":'http://localhost:8084'
+    }
+  }
   /* remove the need to specify .vue files https://vitejs.dev/config/#resolve-extensions
   resolve: {
     extensions: [
