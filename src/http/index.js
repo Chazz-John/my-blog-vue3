@@ -7,7 +7,7 @@ import {
 
 let instance = axios.create({
   baseURL: import.meta.env.VITE_APP_URL, //接口统一域名
-  timeout:6000, //设置超时
+  timeout:120 * 1000, //设置超时
   headers:{
     'Content-Type': 'application/json;charset=UTF-8;',
   },
