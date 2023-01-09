@@ -18,7 +18,7 @@ const routes = [
     path:"/user",
     component: () => import('../view/user.vue'),
     meta:{
-      requiresAuth:true
+      requiresAuth:false
     }
   }
 
@@ -33,7 +33,7 @@ const router = createRouter({
 router.beforeEach((to,from,next) =>{
   // 后期修改为通过接口获取token
   const token = localStorage.getItem('token')
-  console.log(to,from)
+  // console.log(to,from)
   //登录了
   if (token){
     if (to.path ==='login'){

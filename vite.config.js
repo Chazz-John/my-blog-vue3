@@ -6,7 +6,11 @@ const srcPath = path.resolve(__dirname, 'src', 'styles', 'variables.scss')
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [
+    vue({
+      reactivityTransform:true
+    }),
+  ],
   define: { 'process.env': {} },
   css: {
     preprocessorOptions: {
